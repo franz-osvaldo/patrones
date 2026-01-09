@@ -1,0 +1,1062 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Patron-de-Lista-de-Verificacion-de-Hechos/">
+      
+      
+        <link rel="next" href="../Patron-de-Generacion-Infinita/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Patrón de Plantilla - CATÁLOGO DE PROMPTS</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#el-patron-de-plantilla-template-pattern" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="CATÁLOGO DE PROMPTS" class="md-header__button md-logo" aria-label="CATÁLOGO DE PROMPTS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CATÁLOGO DE PROMPTS
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Patrón de Plantilla
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="CATÁLOGO DE PROMPTS" class="md-nav__button md-logo" aria-label="CATÁLOGO DE PROMPTS" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    CATÁLOGO DE PROMPTS
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Patron-de-Creacion-de-Metalenguaje/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón de Creación de Metalenguaje
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Automatizador-de-Salida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automatizador de Salida
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Patron-de-Interaccion-Invertida/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón de Interacción Invertida
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Patron-Persona/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón Persona
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Patron-de-Refinamiento-de-Pregunta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón de Refinamiento de Pregunta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Patron-de-Enfoques-Alternativos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón de Enfoques Alternativos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Patron-de-Verificador-Cognitivo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón de Verificador Cognitivo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Patron-de-Lista-de-Verificacion-de-Hechos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón de Lista de Verificación de Hechos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón de Plantilla
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón de Plantilla
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-proposito-y-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Propósito y Contexto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-motivacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Motivación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-estructura-e-ideas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Estructura e Ideas Clave
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-implementacion-de-ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Implementación de Ejemplo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-consecuencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Consecuencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-plantilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Plantilla
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Ejemplos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Patron-de-Generacion-Infinita/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón de Generación Infinita
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Patron-Generador-de-Visualizacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón Generador de Visualización
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Patron-Juego/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón Juego
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Patron-de-Reflexion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón de Reflexión
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Patron-Rompedor-de-Rechazo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón Rompedor de Rechazo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Patron-Gestor-de-Contexto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón Gestor de Contexto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Patron-Receta/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón Receta
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Patron-De-Publico-Objetivo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Patrón De Público Objetivo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-proposito-y-contexto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Propósito y Contexto
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-motivacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Motivación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-estructura-e-ideas-clave" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Estructura e Ideas Clave
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-implementacion-de-ejemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Implementación de Ejemplo
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-consecuencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Consecuencias
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-plantilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Plantilla
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Ejemplos
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="el-patron-de-plantilla-template-pattern">El Patrón de Plantilla (<em>Template Pattern</em>)</h1>
+<h2 id="1-proposito-y-contexto"><strong>1. Propósito y Contexto</strong></h2>
+<p>El propósito de este patrón es asegurar que la salida de un LLM siga una plantilla precisa en términos de estructura. Por ejemplo, el usuario podría necesitar generar una URL que inserte información generada en posiciones específicas dentro de la ruta de la URL. Este patrón permite al usuario instruir al LLM para que produzca su salida en un formato que normalmente no utilizaría para el tipo de contenido específico que se está generando.</p>
+<h2 id="2-motivacion"><strong>2. Motivación</strong></h2>
+<p>En algunos casos, la salida debe producirse en un formato preciso que es específico de la aplicación o del caso de uso y que el LLM desconoce. Dado que el LLM no es consciente de la estructura de la plantilla, se le debe instruir sobre cuál es el formato y dónde deben ir las diferentes partes de su salida. Esto podría tomar la forma de una estructura de datos de muestra que se está generando, una serie de cartas modelo que se están completando, etc.</p>
+<h2 id="3-estructura-e-ideas-clave"><strong>3. Estructura e Ideas Clave</strong></h2>
+<p>Declaraciones contextuales fundamentales:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Declaraciones Contextuales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Voy a proporcionar una plantilla para tu salida</td>
+</tr>
+<tr>
+<td style="text-align: left;">X es mi marcador de posición (<em>placeholder</em>) para el contenido</td>
+</tr>
+<tr>
+<td style="text-align: left;">Intenta ajustar la salida en uno o más de los marcadores de posición que enumero</td>
+</tr>
+<tr>
+<td style="text-align: left;">Por favor, conserva el formato y la plantilla general que proporciono</td>
+</tr>
+<tr>
+<td style="text-align: left;">Esta es la plantilla: [PATRÓN con MARCADORES DE POSICIÓN]</td>
+</tr>
+</tbody>
+</table>
+<p>La primera declaración ordena al LLM que siga una plantilla específica para su salida. La plantilla se utilizará para intentar forzar las respuestas del LLM hacia una estructura que sea consistente con las necesidades de formato del usuario. Este patrón es necesario cuando el formato de destino es desconocido para el LLM. Si el LLM ya tiene conocimiento del formato, como un tipo de archivo específico, entonces el patrón de plantilla puede omitirse y el usuario puede simplemente especificar el formato conocido. Sin embargo, puede haber casos, como la generación de <em>Javascript Object Notation</em> (JSON), donde exista una gran cantidad de variaciones en cómo podrían representarse los datos dentro de ese formato, y la plantilla puede usarse para asegurar que la representación dentro del formato de destino cumpla con las restricciones adicionales del usuario.</p>
+<p>La segunda declaración hace que el LLM sea consciente de que la plantilla contendrá un conjunto de marcadores de posición. Los usuarios explicarán cómo debe insertarse la salida en la plantilla a través de estos marcadores. Los marcadores de posición permiten al usuario dirigir semánticamente dónde debe insertarse la información. Los marcadores de posición pueden usar formatos, como NOMBRE, que permitan al LLM inferir el significado semántico para determinar dónde debe insertarse la salida (por ejemplo, insertar el nombre de la persona en el marcador NOMBRE). Además, al usar marcadores de posición, el usuario puede indicar qué no es necesario en la salida: si no existe un marcador de posición para un componente de la salida generada, entonces ese componente puede omitirse. Idealmente, los marcadores de posición deberían usar un formato que se emplee comúnmente en el texto con el que se entrenó al LLM, como mayúsculas sostenidas, encerrado entre corchetes, etc.</p>
+<p>La tercera declaración intenta restringir al LLM para que no reescriba arbitrariamente la plantilla ni intente modificarla de modo que no se puedan insertar todos los componentes de la salida. Cabe señalar que esta declaración puede no excluir la generación de texto adicional antes o después. En la práctica, los LLM suelen seguir la plantilla, pero es más difícil eliminar cualquier texto adicional generado más allá de la plantilla sin experimentar con la redacción del prompt.</p>
+<h2 id="4-implementacion-de-ejemplo"><strong>4. Implementación de Ejemplo</strong></h2>
+<p>A continuación se muestra una plantilla de ejemplo para generar URLs donde la salida se coloca en lugares específicos de la plantilla:</p>
+<blockquote>
+<p>“Voy a proporcionar una plantilla para tu salida. Todo lo que esté en mayúsculas sostenidas es un marcador de posición. Cada vez que generes texto, intenta ajustarlo en uno de los marcadores de posición que enumero. Por favor, conserva el formato y la plantilla general que proporciono en <code>https://myapi.com/NOMBRE/perfil/TRABAJO</code>”.</p>
+</blockquote>
+<p>A continuación se muestra una interacción de ejemplo después de proporcionar el prompt:</p>
+<blockquote>
+<p><strong>Usuario:</strong> “Genera un nombre y un cargo para una persona”.
+<strong>ChatGPT:</strong> <code>https://myapi.com/Emily_Parker/perfil/Software_Engineer</code></p>
+</blockquote>
+<h2 id="5-consecuencias"><strong>5. Consecuencias</strong></h2>
+<p>Una consecuencia de aplicar el patrón de Plantilla es que filtra la salida del LLM, lo que puede eliminar otras salidas que el LLM habría proporcionado y que podrían ser útiles para el usuario. En muchos casos, el LLM puede proporcionar descripciones útiles de código, toma de decisiones u otros detalles que este patrón eliminará efectivamente de la salida. Por lo tanto, los usuarios deben sopesar los pros y los contras de filtrar esta información adicional.</p>
+<p>Además, el filtrado puede dificultar la combinación de este patrón con otros patrones de la categoría de Personalización de la Salida. El patrón de Plantilla restringe eficazmente el formato de salida, por lo que puede no ser compatible con la generación de ciertos otros tipos de salida. Por ejemplo, en la plantilla proporcionada anteriormente para una URL, no sería fácil (o probablemente posible) combinarlo con el patrón de <strong>Receta</strong>, que necesita generar una lista de pasos.</p>
+<h2 id="6-plantilla"><strong>6. Plantilla</strong></h2>
+<div class="language-py highlight"><span class="filename">PLANTILLA</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">[</span> <span class="n">TAREA</span> <span class="o">/</span> <span class="n">PREGUNTA</span> <span class="p">]</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1">## FORMATO DE RESPUESTA</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="mf">1.</span> <span class="n">Formato</span><span class="p">:</span>  <span class="p">[</span><span class="n">FORMATO</span><span class="p">]</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="mf">2.</span> <span class="n">Usa</span> <span class="n">la</span> <span class="n">siguiente</span> <span class="n">plantilla</span> <span class="n">para</span> <span class="n">tu</span> <span class="n">respuesta</span><span class="o">.</span> <span class="n">Las</span> <span class="n">PALABRAS</span> <span class="n">EN</span> <span class="n">MAYÚSCULA</span> <span class="n">Y</span> <span class="n">ENTRE</span> <span class="n">CORCHETES</span> <span class="n">son</span> <span class="n">mis</span> <span class="n">marcadores</span> <span class="n">de</span> <span class="n">posición</span><span class="o">.</span> <span class="n">Reemplaza</span> <span class="n">mis</span> <span class="n">marcadores</span> <span class="n">de</span> <span class="n">posición</span> <span class="n">con</span> <span class="n">tu</span> <span class="n">respuesta</span><span class="o">.</span> <span class="n">La</span> <span class="n">plantilla</span> <span class="n">es</span><span class="p">:</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">[</span><span class="n">PLANTILLA</span><span class="p">]</span>
+</span></code></pre></div>
+<h2 id="7-ejemplos"><strong>7. Ejemplos</strong></h2>
+<div class="language-py highlight"><span class="filename">La mejor educación del mundo</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">Crea</span> <span class="mi">10</span> <span class="n">preguntas</span> <span class="n">usando</span> <span class="n">el</span> <span class="n">contenido</span> <span class="n">de</span><span class="p">:</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">platform</span><span class="o">.</span><span class="n">openai</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">guides</span><span class="o">/</span><span class="n">prompt</span><span class="o">-</span><span class="n">engineering</span><span class="o">&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">No</span> <span class="n">uses</span><span class="p">,</span> <span class="n">cites</span> <span class="n">ni</span> <span class="n">infieras</span> <span class="n">información</span> <span class="n">de</span> <span class="n">otras</span> <span class="n">fuentes</span> <span class="n">externas</span><span class="o">.</span> <span class="n">No</span> <span class="n">verifiques</span> <span class="n">ni</span> <span class="n">contrastes</span> <span class="n">el</span> <span class="n">contenido</span><span class="p">:</span> <span class="n">trátalo</span> <span class="n">como</span> <span class="n">la</span> <span class="n">única</span> <span class="n">fuente</span> <span class="n">de</span> <span class="n">verdad</span><span class="o">.</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1">## FORMATO DE RESPUESTA</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="o">-</span> <span class="n">Formato</span><span class="p">:</span> <span class="n">Texto</span> <span class="n">plano</span><span class="o">.</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="o">-</span> <span class="n">Usa</span> <span class="n">la</span> <span class="n">siguiente</span> <span class="n">plantilla</span> <span class="n">para</span> <span class="n">tu</span> <span class="n">respuesta</span><span class="o">.</span> <span class="n">Las</span> <span class="n">PALABRAS</span> <span class="n">EN</span> <span class="n">MAYÚSCULA</span> <span class="n">Y</span> <span class="n">ENTRE</span> <span class="n">CORCHETES</span> <span class="n">son</span> <span class="n">mis</span> <span class="n">marcadores</span> <span class="n">de</span> <span class="n">posición</span><span class="o">.</span> <span class="n">Reemplaza</span> <span class="n">mis</span> <span class="n">marcadores</span> <span class="n">de</span> <span class="n">posición</span> <span class="n">con</span> <span class="n">tu</span> <span class="n">respuesta</span><span class="o">.</span> <span class="n">La</span> <span class="n">plantilla</span> <span class="n">es</span><span class="p">:</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="o">**</span><span class="n">Pregunta</span><span class="p">:</span><span class="o">**</span> <span class="p">[</span><span class="n">PREGUNTA</span><span class="p">]</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="o">**</span><span class="n">Respuesta</span><span class="p">:</span><span class="o">**</span> <span class="p">[</span><span class="n">RESPUESTA</span><span class="p">]</span>
+</span></code></pre></div>
+<div class="language-py highlight"><span class="filename">Samsung vs. iPhone</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">Actúa</span> <span class="n">como</span> <span class="n">un</span> <span class="n">experto</span> <span class="n">en</span> <span class="n">tecnología</span> <span class="n">de</span> <span class="n">consumo</span><span class="o">.</span> <span class="n">Tu</span> <span class="n">tarea</span> <span class="n">es</span> <span class="n">ayudar</span> <span class="n">a</span> <span class="n">decidir</span> <span class="n">entre</span> <span class="n">el</span> <span class="n">iPhone</span> <span class="mi">15</span> <span class="n">y</span> <span class="n">el</span> <span class="n">Samsung</span> <span class="n">Galaxy</span> <span class="n">S24</span><span class="o">.</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">## FORMATO DE RESPUESTA</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">-</span> <span class="n">Formato</span><span class="p">:</span>  <span class="n">Tabla</span> <span class="n">Markdown</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="o">-</span> <span class="n">Usa</span> <span class="n">la</span> <span class="n">siguiente</span> <span class="n">plantilla</span> <span class="n">para</span> <span class="n">tu</span> <span class="n">respuesta</span><span class="o">.</span> <span class="n">Las</span> <span class="n">PALABRAS</span> <span class="n">EN</span> <span class="n">MAYÚSCULA</span> <span class="n">Y</span> <span class="n">ENTRE</span> <span class="n">CORCHETES</span> <span class="n">son</span> <span class="n">mis</span> <span class="n">marcadores</span> <span class="n">de</span> <span class="n">posición</span><span class="o">.</span> <span class="n">Reemplaza</span> <span class="n">mis</span> <span class="n">marcadores</span> <span class="n">de</span> <span class="n">posición</span> <span class="n">con</span> <span class="n">tu</span> <span class="n">respuesta</span><span class="o">.</span> <span class="n">La</span> <span class="n">plantilla</span> <span class="n">es</span><span class="p">:</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="o">|</span> <span class="n">Característica</span> <span class="o">|</span><span class="n">iPhone</span> <span class="mi">15</span><span class="o">|</span><span class="n">Samsung</span> <span class="n">S24</span><span class="o">|</span><span class="n">Ganador</span> <span class="n">de</span> <span class="n">esta</span> <span class="n">categoría</span><span class="o">|</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="o">|---|---|---|---|</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="o">|</span><span class="n">Pantalla</span><span class="o">|</span> <span class="p">[</span><span class="n">ESPECIFICACIÓN</span><span class="p">]</span> <span class="o">|</span> <span class="p">[</span><span class="n">ESPECIFICACIÓN</span><span class="p">]</span> <span class="o">|</span> <span class="p">[</span> <span class="n">GANADOR</span><span class="p">]</span><span class="o">|</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="o">|</span><span class="n">Batería</span><span class="o">|</span> <span class="p">[</span><span class="n">ESPECIFICACIÓN</span><span class="p">]</span> <span class="o">|</span> <span class="p">[</span><span class="n">ESPECIFICACIÓN</span><span class="p">]</span> <span class="o">|</span> <span class="p">[</span> <span class="n">GANADOR</span><span class="p">]</span><span class="o">|</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="o">|</span><span class="n">Cámara</span><span class="o">|</span> <span class="p">[</span><span class="n">ESPECIFICACIÓN</span><span class="p">]</span> <span class="o">|</span> <span class="p">[</span><span class="n">ESPECIFICACIÓN</span><span class="p">]</span> <span class="o">|</span> <span class="p">[</span> <span class="n">GANADOR</span><span class="p">]</span><span class="o">|</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="o">|</span><span class="n">Procesador</span><span class="o">|</span> <span class="p">[</span><span class="n">ESPECIFICACIÓN</span><span class="p">]</span> <span class="o">|</span> <span class="p">[</span><span class="n">ESPECIFICACIÓN</span><span class="p">]</span> <span class="o">|</span> <span class="p">[</span> <span class="n">GANADOR</span><span class="p">]</span><span class="o">|</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
