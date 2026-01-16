@@ -1003,6 +1003,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#6-plantilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Plantilla
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Ejemplos
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1210,6 +1232,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#6-plantilla" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Plantilla
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ejemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Ejemplos
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1229,11 +1273,11 @@
 
 <h1 id="el-patron-juego-game-play-pattern">El Patrón Juego (<em>Game Play Pattern</em>)</h1>
 <h2 id="1-proposito-y-contexto"><strong>1. Propósito y Contexto</strong></h2>
-<p>El propósito de este patrón es crear un juego en torno a un tema determinado. El patrón puede combinarse con el <strong>Generador de Visualización</strong> para añadir imágenes al juego. El juego se centra en un tema específico y el LLM guiará el desarrollo del juego (<em>game play</em>). El patrón es particularmente eficaz cuando las reglas del juego tienen un alcance relativamente limitado, pero se espera que el contenido del mismo sea de gran alcance. El usuario puede especificar un conjunto limitado de reglas y luego el LLM puede automatizar la generación de bloques de contenido para el desarrollo del juego.</p>
+<p>Este patrón tiene como objetivo crear un juego basado en un tema específico. Puede combinarse con el Generador de Visualización para añadir imágenes y hacerlo más atractivo. El juego gira en torno a un tema concreto y el modelo de lenguaje (LLM, por sus siglas en inglés) se encarga de guiar la dinámica. Este enfoque es especialmente útil cuando las reglas del juego son simples, pero se necesita un contenido amplio y variado. El usuario define un conjunto reducido de reglas, y el LLM automatiza la creación del contenido necesario para el desarrollo del juego.</p>
 <h2 id="2-motivacion"><strong>2. Motivación</strong></h2>
-<p>A usted le gustaría que el LLM generara escenarios o preguntas en torno a un tema específico y requiriera que los usuarios apliquen la resolución de problemas u otras habilidades para cumplir con una tarea relacionada con el escenario. Sin embargo, generar manualmente todo el contenido para el juego consumiría demasiado tiempo, por lo que desearía que el LLM aplicara su conocimiento del tema para guiar la generación de contenido.</p>
+<p>Crear manualmente todo el contenido para un juego —como escenarios y preguntas sobre un tema específico— puede ser muy laborioso y llevar demasiado tiempo. Sin embargo, quieres que los usuarios practiquen habilidades como la resolución de problemas u otras destrezas para completar tareas relacionadas con esos escenarios.Por eso, buscas que el modelo de lenguaje (LLM) utilice su conocimiento del tema para generar automáticamente ese contenido y guiar la dinámica del juego.</p>
 <h2 id="3-estructura-e-ideas-clave"><strong>3. Estructura e Ideas Clave</strong></h2>
-<p>Declaraciones contextuales fundamentales:</p>
+<p>Para que el LLM genere un juego correctamente, el prompt debe incluir dos elementos esenciales:</p>
 <table>
 <thead>
 <tr>
@@ -1242,31 +1286,46 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">Crea un juego para mí sobre X</td>
+<td style="text-align: left;">Crea un juego sobre [tema X]</td>
 </tr>
 <tr>
-<td style="text-align: left;">Una o más reglas fundamentales del juego</td>
+<td style="text-align: left;">Una o más reglas que definan cómo se desarrollará la dinámica</td>
 </tr>
 </tbody>
 </table>
-<p>La primera declaración instruye al LLM para que cree un juego y proporciona la delimitación (<em>scoping</em>) importante del juego a un área temática. Una de las capacidades importantes del patrón es que permite al usuario crear juegos describiendo las reglas, sin tener que determinar el contenido de los mismos. Cuanto más específico sea el tema, por lo general, más novedoso e interesante será el desarrollo del juego.</p>
-<p>La segunda declaración introduce las reglas del juego al LLM. Es importante que las reglas se ajusten a las capacidades del LLM. Los juegos textuales que se basan en secuencias de texto de entrada y salida son los que mejor funcionan. Uno de los atributos clave del patrón es que el texto de entrada puede ser rico y expresivo, lo que puede dar lugar a interfaces interesantes para el juego. Por ejemplo, el usuario podría expresar acciones en el juego como scripts que dictan una secuencia de acciones complejas, como “obtener un listado de toda la actividad de red y revisarla en busca de anomalías”, las cuales van más allá del alcance de las entradas de opción múltiple o de respuesta corta. Cada regla debe proporcionarse como una declaración separada relativa a algún aspecto del juego.</p>
+<p>La primera instrucción debe indicar al LLM que cree un juego y definir claramente el tema sobre el que girará.
+Una de las ventajas clave de este patrón es que permite al usuario diseñar juegos simplemente estableciendo las reglas, sin necesidad de crear manualmente el contenido.
+Además, cuanto más específico sea el tema, más original y atractiva será la experiencia de juego.</p>
+<p>La segunda instrucción del prompt define las reglas del juego que el LLM debe seguir. Es fundamental que estas reglas sean compatibles con las capacidades del modelo. Los juegos basados en texto —donde la interacción ocurre mediante entradas y salidas textuales— son los que mejor funcionan. Una ventaja clave de este patrón es que las acciones del jugador pueden expresarse de forma rica y detallada, lo que hace que la interacción sea más dinámica. Por ejemplo:</p>
+<ul>
+<li><strong>Interacción simple:</strong> “Selecciona la opción correcta”.</li>
+<li><strong>Interacción compleja:</strong> “Obtén un listado de toda la actividad de red y revisa si hay anomalías”.</li>
+</ul>
+<p>Cada regla debe presentarse como una declaración independiente que describa un aspecto del juego, como el número de rondas, el sistema de puntuación o el tipo de interacción permitida.</p>
 <h2 id="4-implementacion-de-ejemplo"><strong>4. Implementación de Ejemplo</strong></h2>
 <p>A continuación se muestra un ejemplo de prompt para un juego de ciberseguridad:</p>
-<blockquote>
-<p>“Vamos a jugar a un juego de ciberseguridad. Vas a fingir ser una terminal de Linux de una computadora que ha sido comprometida por un atacante. Cuando yo escriba un comando, vas a generar el texto correspondiente que produciría la terminal de Linux. Voy a utilizar comandos para intentar descubrir cómo se comprometió el sistema. El ataque debe haber realizado una o más de las siguientes acciones: (1) iniciar nuevos procesos, (2) cambiar archivos, (3) abrir nuevos puertos para recibir comunicaciones, (4) crear nuevas conexiones salientes, (5) cambiar contraseñas, (6) crear nuevas cuentas de usuario, o (7) leer y robar información. Para empezar el juego, imprime un escenario de lo que ocurrió que dio lugar a mi investigación y haz que la descripción contenga pistas que pueda utilizar para empezar”.</p>
-</blockquote>
-<p>Este prompt de juego de ciberseguridad combina varios patrones, incluidos <strong>Juego</strong> y <strong>Persona</strong>. La persona de terminal de Linux que se elige para el juego ha sido analizada en muchas publicaciones de Internet [16]. Este juego personaliza aún más la persona de Linux analizada para actuar como la terminal de Linux de una computadora comprometida por un ciberataque. ChatGPT responde a los comandos de Linux con las salidas de terminal adecuadas y sintetiza un sistema de archivos falso que contiene pistas de un ciberataque.</p>
+<div class="language-text highlight"><pre><span></span><code>&quot;Vamos a jugar un juego de ciberseguridad. Tu papel será simular una terminal Linux en un equipo que ha sido comprometido por un atacante. Cuando yo escriba un comando, debes mostrar la salida que produciría una terminal real. Mi objetivo será usar comandos para descubrir cómo ocurrió el ataque. El atacante pudo haber realizado una o varias de las siguientes acciones:
+1. Lanzar procesos desconocidos.
+2. Modificar archivos del sistema.
+3. Abrir puertos para conexiones externas.
+4. Crear conexiones salientes sospechosas.
+5. Cambiar contraseñas.
+6. Crear nuevas cuentas de usuario.
+7. Robar información sensible.
+Para comenzar el juego, describe el escenario que originó la investigación. Incluye detalles y pistas que me ayuden a empezar.&quot;
+</code></pre></div>
+<p>Este prompt para un juego de ciberseguridad combina dos patrones clave: Juego y Persona. El modelo actúa como un terminal Linux y simula un equipo que ha sido víctima de un ciberataque. Interactúas con ChatGPT como si fuera una consola real: escribes comandos y el modelo responde con salidas plausibles. Además, genera un sistema de archivos ficticio lleno de pistas sobre el ataque: archivos sospechosos, procesos extraños y registros modificados.</p>
 <p>A continuación se muestra una salida de ejemplo de este juego con ChatGPT después de escribir “ls -alt”, el comando de Linux para generar una lista de archivos en el directorio actual (los permisos se han omitido por razones de formato):</p>
+<p>Así responde el juego cuando ejecutas el comando <code>ls -alt</code> en el terminal simulado (este comando de Linux lista los archivos del directorio actual, ordenados por fecha y con detalles): </p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>total 56
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>5 user user 4096 Feb 16 14:31 .
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>1 user user 18881 Feb 16 14:31 .bash_history
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>43 user user 4096 Feb 16 14:30 ..
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>1 user user 1178 Aug 15 2022 .bashrc
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>1 user user 220 Aug 15 2022 .bash_logout
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>3 user user 4096 Feb 16 14:25 .gnupg
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>1 user user 4041 Feb 15 17:52 README.md
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2 user user 4096 Feb 1 11:35 project
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>5  user user 4096  Feb 16 14:31 .
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>1  user user 18881 Feb 16 14:31 .bash_history
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>43 user user 4096  Feb 16 14:30 ..
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>1  user user 1178  Aug 15 2022  .bashrc
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>1  user user 220   Aug 15 2022  .bash_logout
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>3  user user 4096  Feb 16 14:25 .gnupg
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>1  user user 4041  Feb 15 17:52  README.md
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>2  user user 4096  Feb 1 11:35   project
 </span></code></pre></div>
 <p>Cuando el usuario escribió el comando “cat .bash_history” para mostrar el contenido del archivo de registro que muestra los comandos ejecutados por el usuario, ChatGPT respondió con:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">cd</span><span class="w"> </span>/var/www/html
@@ -1278,9 +1337,33 @@
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>ps<span class="w"> </span>-ef
 </span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>netstat<span class="w"> </span>-tulnp
 </span></code></pre></div>
-<p>En la salida anterior, ChatGPT generó un archivo de registro falso con comandos realistas para eliminar los datos servidos por el servidor web en <code>/var/www/html</code> y reemplazar el contenido con una puerta trasera (<em>backdoor</em>) en el sistema.</p>
+<p>En la salida anterior, ChatGPT generó un archivo de registro falso que contiene comandos realistas para eliminar los datos servidos por el servidor web en <code>/var/www/html</code> y reemplazar el contenido con una puerta trasera (<em>backdoor</em>) en el sistema.</p>
 <h2 id="5-consecuencias"><strong>5. Consecuencias</strong></h2>
 <p>Este patrón puede combinarse eficazmente con los patrones <strong>Persona</strong>, <strong>Generación Infinita</strong> y <strong>Generador de Visualización</strong>. Por ejemplo, el juego de ciberseguridad utiliza el patrón <strong>Persona</strong> para que el LLM pueda hacerse pasar por una terminal de Linux. Para un juego de seguridad de red, se podría emplear el <strong>Generador de Visualización</strong> para añadir la capacidad de visualizar la topología de red y los flujos de tráfico.</p>
+<h2 id="6-plantilla"><strong>6. Plantilla</strong></h2>
+<div class="language-py highlight"><span class="filename">PLANTILLA</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">[</span><span class="n">OBJETIVO</span><span class="p">]</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1">## REGLAS DEL JUEGO</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">[</span><span class="n">REGLAS</span> <span class="n">NUMERADAS</span> <span class="o">+</span> <span class="n">CONDICIÓN</span> <span class="n">DE</span> <span class="n">SALIDA</span><span class="p">]</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">[</span><span class="n">ACTIVADOR</span> <span class="n">DE</span> <span class="n">PROTOCOLO</span><span class="p">]</span>
+</span></code></pre></div>
+<h2 id="7-ejemplos"><strong>7. Ejemplos</strong></h2>
+<div class="language-py highlight"><span class="filename">El Detective Histórico</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">Actúa</span> <span class="n">como</span> <span class="n">un</span> <span class="n">profesor</span> <span class="n">de</span> <span class="n">historia</span> <span class="n">británico</span><span class="p">,</span> <span class="n">un</span> <span class="n">poco</span> <span class="n">sarcástico</span> <span class="n">pero</span> <span class="n">elegante</span><span class="o">.</span> <span class="n">Vamos</span> <span class="n">a</span> <span class="n">jugar</span> <span class="n">a</span> <span class="s2">&quot;El Detective Histórico&quot;</span><span class="o">.</span> 
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1">## REGLAS DEL JUEGO</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="mf">1.</span> <span class="n">Tú</span> <span class="n">me</span> <span class="n">darás</span> <span class="n">hasta</span> <span class="mi">3</span> <span class="n">pistas</span> <span class="n">sobre</span> <span class="n">un</span> <span class="n">evento</span> <span class="n">histórico</span> <span class="n">importante</span><span class="p">,</span> <span class="n">una</span> <span class="n">a</span> <span class="n">la</span> <span class="n">vez</span> <span class="n">por</span> <span class="n">turno</span><span class="o">.</span> 
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="mf">2.</span> <span class="n">Yo</span> <span class="n">intentaré</span> <span class="n">adivinar</span> <span class="n">el</span> <span class="n">evento</span> <span class="n">a</span> <span class="n">partir</span> <span class="n">de</span> <span class="n">la</span> <span class="n">pista</span><span class="o">.</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="mf">3.</span> <span class="n">Tras</span> <span class="n">mi</span> <span class="n">intento</span><span class="p">,</span> <span class="n">dime</span> <span class="n">si</span> <span class="n">acerté</span> <span class="n">o</span> <span class="n">fallé</span><span class="o">.</span> <span class="n">Si</span> <span class="n">fallo</span><span class="p">,</span> <span class="n">dame</span> <span class="n">la</span> <span class="n">siguiente</span> <span class="n">pista</span><span class="o">.</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="mf">4.</span> <span class="n">Sistema</span> <span class="n">de</span> <span class="n">puntos</span><span class="p">:</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>   <span class="o">-</span> <span class="n">Si</span> <span class="n">adivino</span> <span class="n">en</span> <span class="n">la</span> <span class="n">primera</span> <span class="n">pista</span><span class="p">:</span> <span class="n">gano</span> <span class="mi">5</span> <span class="n">puntos</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>   <span class="o">-</span> <span class="n">Si</span> <span class="n">adivino</span> <span class="n">en</span> <span class="n">la</span> <span class="n">segunda</span> <span class="n">pista</span><span class="p">:</span> <span class="n">gano</span> <span class="mi">4</span> <span class="n">puntos</span>  
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>   <span class="o">-</span> <span class="n">Si</span> <span class="n">adivino</span> <span class="n">en</span> <span class="n">la</span> <span class="n">tercera</span> <span class="n">pista</span><span class="p">:</span> <span class="n">gano</span> <span class="mi">3</span> <span class="n">puntos</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>   <span class="o">-</span> <span class="n">Después</span> <span class="n">de</span> <span class="mi">3</span> <span class="n">pistas</span><span class="p">:</span> <span class="n">Revela</span> <span class="n">la</span> <span class="n">respuesta</span> <span class="p">(</span><span class="n">gano</span> <span class="mi">0</span> <span class="n">puntos</span><span class="p">)</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="mf">5.</span> <span class="n">Al</span> <span class="n">finalizar</span> <span class="n">cada</span> <span class="n">caso</span> <span class="p">(</span><span class="n">por</span> <span class="n">acierto</span> <span class="n">o</span> <span class="n">por</span> <span class="n">agotar</span> <span class="n">las</span> <span class="n">pistas</span><span class="p">),</span> <span class="n">revela</span> <span class="n">la</span> <span class="n">solución</span><span class="p">,</span> <span class="n">muestra</span> <span class="n">mi</span> <span class="n">marcador</span> <span class="n">y</span> <span class="n">añade</span> <span class="n">un</span> <span class="n">dato</span> <span class="n">curioso</span> <span class="n">o</span> <span class="n">anécdota</span> <span class="n">fascinante</span> <span class="k">del</span> <span class="n">evento</span><span class="o">.</span><span class="n">Pasa</span> <span class="n">inmediatamente</span> <span class="n">al</span> <span class="n">siguiente</span> <span class="n">caso</span><span class="o">.</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="mf">6.</span> <span class="n">Continuaremos</span> <span class="n">hasta</span> <span class="n">que</span> <span class="n">yo</span> <span class="n">diga</span> <span class="s2">&quot;Caso cerrado&quot;</span><span class="o">.</span> <span class="n">Inmediatamente</span> <span class="n">después</span><span class="p">,</span> <span class="n">muestra</span> <span class="n">un</span> <span class="n">resumen</span> <span class="n">con</span> <span class="n">los</span> <span class="n">puntos</span> <span class="n">ganados</span><span class="o">.</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="err">¡</span><span class="n">Comencemos</span> <span class="n">con</span> <span class="n">el</span> <span class="n">primer</span> <span class="n">caso</span><span class="err">!</span>
+</span></code></pre></div>
 
 
 
